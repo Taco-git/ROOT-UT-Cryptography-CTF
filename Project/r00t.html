@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ROOT CLUB // Special Login</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+    <header class="topbar">
+        <div class="brand">
+            <span class="logo-dot"></span>
+            <span class="brand-name">ROOT CLUB</span>
+        </div>
+        <div class="api-target">
+            <span class="dim">api://</span><span id="apiTargetDisplay">oracle-root.club</span>
+        </div>
+    </header>
+
+    <main class="page-center">
+
+        <section class="card">
+            <h1 class="card-title">
+                <span class="prompt">$</span> enroll
+            </h1>
+            <form id="enrollForm" class="auth-form" autocomplete="off">
+                <label class="field">
+                    <span class="field-label">name</span>
+                    <input type="text" id="enrollName" required placeholder="operator" />
+                </label>
+                <button type="submit" class="btn primary">&gt; request credential</button>
+            </form>
+
+            <div class="card-header-row" style="margin-top:18px;">
+                <h2 class="card-title small">
+                    <span class="prompt">#</span> credential
+                </h2>
+                <button id="copyTokenBtn" class="btn ghost mini">copy</button>
+            </div>
+            <pre id="tokenBox" class="cookie-box"><span class="dim">// no credential issued.</span></pre>
+        </section>
+
+        <section class="card">
+            <h1 class="card-title">
+                <span class="prompt">$</span> verify
+            </h1>
+            <form id="verifyForm" class="auth-form" autocomplete="off">
+                <label class="field">
+                    <span class="field-label">credential</span>
+                    <textarea id="verifyToken" required rows="3" placeholder="paste credential..."></textarea>
+                </label>
+                <button type="submit" class="btn primary">&gt; submit</button>
+            </form>
+
+            <div class="card-header-row" style="margin-top:18px;">
+                <h2 class="card-title small">
+                    <span class="prompt">&gt;</span> server_response
+                </h2>
+                <button id="clearResponseBtn" class="btn ghost mini">clear</button>
+            </div>
+            <div id="responseBox" class="response-box neutral">
+                <span class="dim">// idle.</span>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="api.js"></script>
+    <script src="r00t.js"></script>
+</body>
+</html>
